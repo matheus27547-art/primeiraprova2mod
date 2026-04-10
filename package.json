@@ -1,5 +1,5 @@
 {
-  "name": "prova1",
+  "name": "testando2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,7 +11,7 @@
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-router-dom": "^7.14.0",
-    "react-scripts": "^0.0.0",
+    "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -20,6 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server --watch db.json --port 38000"
+
   },
   "eslintConfig": {
     "extends": [
