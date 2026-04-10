@@ -2,7 +2,7 @@ import React from 'react';
 
 const Input = (props) => {
   return (
-    <div>
+    <div style={{ textAlign: 'center' }}>
       <label htmlFor={props.id}>{props.label}</label>
       <input 
         id={props.id}

@@ -23,7 +23,7 @@ const NewPage = () => {
   };
 
   return (
-    <div>
+    <div style={{ textAlign: 'center' }}>
       <h1>Novo Produto</h1>
       <form onSubmit={handleSubmit}>
         <Input 
@@ -47,7 +47,9 @@ const NewPage = () => {
           value={form.preco} 
           onChange={handleChange} 
         />
-        <Button onClick={handleSubmit}>SUBMETER</Button>
+        <Button onClick={handleSubmit} style={{ backgroundColor: 'green', color: 'white' }}>
+          Enviar
+        </Button>
       </form>
     </div>
   );

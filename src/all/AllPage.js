@@ -23,9 +23,9 @@ const AllPage = () => {
   };
 
   return (
-    <div>
+    <div style={{ textAlign: 'center' }}>
       <h1>Lista de Produtos</h1>
-      <table>
+      <table >
         <thead>
           <tr>
             <th>Nome</th>
@@ -34,7 +34,7 @@ const AllPage = () => {
             <th>Remover</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody >
           {listaProdutos.map(produto => (
             <tr key={produto.id}>
               <td>{produto.nome}</td>
