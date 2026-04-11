@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <div>
-        <nav style={{ marginBottom: '20px' }}>
+        <nav>
           <Link to="/nova">Cadastrar Produto Novo</Link> |{" "}
           <Link to="/frutas">Listar Frutas</Link>
         </nav>
