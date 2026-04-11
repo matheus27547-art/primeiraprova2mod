@@ -4,7 +4,7 @@ import Input from './components/Input';
 import Button from './components/Button';
 import api from '../utils/api';
 
-const NewPage = () => {
+const NovaPage = () => {
   const [form, setForm] = useState({ nome: "", descricao: "", preco: "" });
 
   const handleChange = (e) => {
@@ -14,10 +14,10 @@ const NewPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    api.post("/produtos", form)
+    api.post("/frutas", form)
       .then((data) => {
         setForm({ nome: "", descricao: "", preco: "" });
-        alert("Produto adicionado com sucesso!");
+        alert("Fruta adicionada com sucesso!");
       })
       .catch((err) => console.error(err));
   };
@@ -55,4 +55,4 @@ const NewPage = () => {
   );
 };
 
-export default NewPage;
+export default NovaPage;

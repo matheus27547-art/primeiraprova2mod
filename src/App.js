@@ -1,21 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import NewPage from './new/NewPage';
-import AllPage from './all/AllPage';
+import NovaPage from './nova/NovaPage';
+import FrutasPage from './frutas/FrutasPage';
 
 function App() {
   return (
     <Router>
       <div>
         <nav style={{ marginBottom: '20px' }}>
-          <Link to="/new">Cadastrar Produto Novo</Link> |{" "}
-          <Link to="/all">Listar Produtos</Link>
+          <Link to="/nova">Cadastrar Produto Novo</Link> |{" "}
+          <Link to="/frutas">Listar Frutas</Link>
         </nav>
 
-        {/* Hierarquia das Rotas */}
         <Routes>
-          <Route path="/new" element={<NewPage />} />
-          <Route path="/all" element={<AllPage />} />
+          <Route path="/nova" element={<NovaPage />} />
+          <Route path="/frutas" element={<FrutasPage />} />
         </Routes>
       </div>
     </Router>

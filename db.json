@@ -1,10 +1,16 @@
 {
-  "produtos": [
+  "frutas": [
     {
       "nome": "dasd",
       "descricao": "asd",
       "preco": "sad",
       "id": "83nOuEiZYwc"
+    },
+    {
+      "nome": "dsa",
+      "descricao": "d",
+      "preco": "d",
+      "id": "rRrBp1DIguc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

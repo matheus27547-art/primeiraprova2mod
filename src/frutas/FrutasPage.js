@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import api from '../utils/api';
 
-const AllPage = () => {
-  const [listaProdutos, setListaProdutos] = useState([]);
+const FrutasPage = () => {
+  const [listaFrutas, setlistaFrutas] = useState([]);
 
   const loadList = () => {
-    api.get("/produtos")
-      .then(res => setListaProdutos(res.data))
+    api.get("/frutas")
+      .then(res => setlistaFrutas(res.data))
       .catch(err => console.error(err));
   };
 
@@ -15,7 +15,7 @@ const AllPage = () => {
   }, []);
 
   const removeFromList = (id) => {
-    api.delete("/produtos/" + id)
+    api.delete("/frutas/" + id)
       .then(res => {
         loadList(); 
       })
@@ -24,7 +24,7 @@ const AllPage = () => {
 
   return (
     <div style={{ textAlign: 'center' }}>
-      <h1>Lista de Produtos</h1>
+      <h1>Lista de Frutas</h1>
       <table >
         <thead>
           <tr>
@@ -34,13 +34,13 @@ const AllPage = () => {
             <th>Remover</th>
           </tr>
         </thead>
-        <tbody >
-          {listaProdutos.map(produto => (
-            <tr key={produto.id}>
-              <td>{produto.nome}</td>
-              <td>{produto.descricao}</td>
-              <td>{produto.preco}</td>
-              <td onClick={() => removeFromList(produto.id)} style={{ color: 'red', cursor: 'pointer' }}>
+      <tbody >
+          {listaFrutas.map(fruta => (
+            <tr key={fruta.id}>
+              <td>{fruta.nome}</td>
+              <td>{fruta.descricao}</td>
+              <td>{fruta.preco}</td>
+              <td onClick={() => removeFromList(fruta.id)} style={{ color: 'red', cursor: 'pointer' }}>
                 X
               </td>
             </tr>
@@ -51,4 +51,4 @@ const AllPage = () => {
   );
 };
 
-export default AllPage;
+export default FrutasPage;
